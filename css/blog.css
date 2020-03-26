@@ -1,0 +1,135 @@
+.container {
+    display: grid;
+    margin: auto;
+    justify-content: center;
+    grid-template-columns: 60vw repeat(8, 1fr);
+    grid-template-rows: 30px 1fr;
+    grid-template-areas: "hd"
+                         "ct"
+                         "ft"; 
+}
+
+@media(min-width:600px) {
+    .container {
+        display: grid;
+        justify-content: center;
+        padding: 20px;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 10vh 70vh 8vh 1fr;
+        grid-template-areas: "hd hd hd hd hd hd hd hd hd"
+                             "ct ct ct ct ct ct ct ct ct"
+                             "ft ft ft ft ft ft ft ft ft";
+    }
+}
+
+
+.header {
+    grid-area: hd;
+    place-items: center center;
+    flex-direction: row;
+    background-color: #957BBE;
+    color: white;           
+}
+
+.avatar {
+    grid-area: avat;
+    flex-direction: row;
+    display: grid;
+    justify-content: start;
+    align-content: center;
+}
+
+.footer {
+    display: grid; 
+    grid-area: ft;
+    place-content: center center;
+    place-items: center center;
+    background-color: #957BBE;
+    color: white !important;           
+}
+.content {
+    grid-area: ct;
+    place-content: center;
+    background-color: white !important;
+    scroll-padding: 20px;
+    scroll-margin: 20px;
+
+}
+
+.card-title {
+    font-style: italic;
+    text-decoration: underline;
+    display: grid;
+    font-weight: bold;
+    place-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+#blog-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 350px);
+    grid-template-rows: repeat(4, 375px);
+    grid-gap: 16px;
+    padding: 16px;;
+    overflow: scroll;
+    /* border: 10px solid green; */
+}
+
+.blog-card {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: "avat ch" "cc cc" "cf cf";
+    border: 3px solid plum;
+    border-radius: 16px;
+    padding: .5rem;
+}
+
+
+.card-header {
+    grid-area: ch;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.card-content {
+    grid-area: cc;
+    padding: 8px;
+}
+
+.card-footer {
+    grid-area: cf;
+    justify-content: center;
+    align-content: center;
+    display: grid;  
+}
+
+h1, h2, h3, h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.avatar-circle {
+    width: 100px;
+    height: 100px;
+    background-color: plum;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+  }
+
+.initials {
+    position: relative;
+    top: 25px; /* 25% of parent */
+    font-size: 50px; /* 50% of parent */
+    line-height: 50px; /* 50% of parent */
+    color: #fff;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}

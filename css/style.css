@@ -1,16 +1,43 @@
-.container {
-    display: grid;
-    margin: auto;
-    justify-content: center;
-    grid-template-columns: 60vw repeat(8, 1fr);
-    grid-template-rows: 30px 1fr;
-    grid-template-areas: "hd"
-                        "sb"
-                        "ct"
-                        "ft";
+/* Anything smaller than first breakpoint 600px */
+@media(max-width:599px) {
+    .container {
+        display: grid;
+        margin: auto;
+        justify-content: center;
+        grid-template-columns: 60vw repeat(8, 1fr);
+        grid-template-rows: 30px 1fr;
+        grid-template-areas: "hd"
+                            "sb"
+                            "ct"
+                            "ft";
+    }
+
+    #team-cards {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-flow: row;
+        grid-gap: 16px;
+        padding: 16px;
+    }
+
+    #nba_conference_list {
+        font-size: 1em;
+    }
+
+    h1#blog-header {
+        margin: 8px;
+        font-size: 1em;
+    }
+
+    h2#team-header {
+        margin: 8px;
+        font-size: 1em;
+    }
 }
 
-@media(min-width:600px) {
+/* Medium Screens */
+@media (min-width: 600px) and (max-width:900px) {
     .container {
         display: grid;
         justify-content: center;
@@ -18,8 +45,68 @@
         grid-template-columns: 200px repeat(8, 1fr);
         grid-template-rows: 13vh 75vh 8vh;
         grid-template-areas: "hd hd hd hd hd hd hd hd hd"
-                             "sb sb ct ct ct ct ct ct ct"
-                             "ft ft ft ft ft ft ft ft ft";
+                                "sb sb ct ct ct ct ct ct ct"
+                                "ft ft ft ft ft ft ft ft ft";
+    }
+
+    #team-cards {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-flow: row;
+        grid-gap: 16px;
+        padding: 16px;
+    }
+
+    #nba_conference_list {
+        font-size: 1.2em;
+    }
+
+    h1#blog-header {
+        margin: 8px;
+        font-size: 1.2em;
+    }
+
+    h2#team-header {
+        margin: 8px;
+        font-size: 1.2em;
+    }
+}
+
+/* Large Screens */
+@media (min-width:901px) {
+    .container {
+        display: grid;
+        justify-content: center;
+        padding: 20px;
+        grid-template-columns: 200px repeat(8, 1fr);
+        grid-template-rows: 13vh 75vh 8vh;
+        grid-template-areas: "hd hd hd hd hd hd hd hd hd"
+                                "sb sb ct ct ct ct ct ct ct"
+                                "ft ft ft ft ft ft ft ft ft";
+    }
+
+    #team-cards {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-flow: row;
+        grid-gap: 16px;
+        padding: 16px;
+    }
+
+    #nba_conference_list {
+        font-size: 1.5em;
+    }
+
+    h1#blog-header {
+        margin: 8px;
+        font-size: 1.5em;
+    }
+
+    h2#team-header {
+        margin: 8px;
+        font-size: 1.5em;
     }
 }
 
@@ -63,15 +150,6 @@ footer {
     color: white;           
 }
 
-#team-cards {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-flow: row;
-    grid-gap: 16px;
-    padding: 16px;
-}
-
 .team-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -79,17 +157,6 @@ footer {
     border-radius: .25rem;
     min-width: 200px;
     border-radius: 8px;
-}
-
-h1#blog-header {
-    margin: 8px;
-}
-h2#team-header {
-    margin: 8px;
-}
-
-#nba_conference_list {
-    font-size: 1.2em;
 }
 
 h4.card-title {
